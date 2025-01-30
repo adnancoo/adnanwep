@@ -8,112 +8,112 @@ body {
 }
 
 header {
-    background-color: #330bc5;
+    background: linear-gradient(135deg, #330bc5, #6a11cb);
     color: #fff;
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
 header p {
     margin: 10px 0 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #e0e0e0;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .about-me, .languages, .games, .social-media {
     background-color: #fff;
     margin: 20px auto;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     max-width: 800px;
 }
 
 h2 {
     color: #330bc5;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
-    border-bottom: 2px solid #330bc5;
+    border-bottom: 3px solid #330bc5;
     display: inline-block;
     padding-bottom: 5px;
 }
 
 .language-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
 }
 
 .language-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #f1f1f1;
-    padding: 15px 25px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    text-align: center;
 }
 
 .language-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .language-item img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 .language-details {
     margin-top: 20px;
     padding: 20px;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 12px;
     display: none;
+    animation: slideIn 0.5s ease-in-out;
 }
 
 .language-details.active {
     display: block;
 }
 
-.games ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.games ul li {
-    background-color: #f1f1f1;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.games ul li:hover {
-    background-color: #e0e0e0;
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 .social-links {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
 .social-links a {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
     color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .social-links a i {
@@ -126,21 +126,27 @@ h2 {
 .instagram { background-color: #e4405f; }
 
 .social-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #330bc5;
+    padding: 30px;
+    background: linear-gradient(135deg, #330bc5, #6a11cb);
     color: #fff;
     margin-top: 40px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
 }
 
 footer .designer {
     font-weight: bold;
-    color: #554100;
+    color: #ffdd57;
+    font-size: 1.2rem;
+    animation: glow 2s infinite alternate;
 }
 
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ffdd57; }
+    to { text-shadow: 0 0 20px #ffdd57; }
+}
