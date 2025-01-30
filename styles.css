@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #330bc5;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.about-me, .languages, .games, .social-media {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+h2 {
+    color: #330bc5;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #330bc5;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.language-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 15px 25px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.language-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.language-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.language-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: none;
+}
+
+.language-details.active {
+    display: block;
+}
+
+.games ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.games ul li {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.games ul li:hover {
+    background-color: #e0e0e0;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-links a i {
+    margin-right: 10px;
+}
+
+.discord { background-color: #7289da; }
+.tiktok { background-color: #000; }
+.facebook { background-color: #1877f2; }
+.instagram { background-color: #e4405f; }
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #330bc5;
+    color: #fff;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer .designer {
+    font-weight: bold;
+    color: #554100;
+}
+
