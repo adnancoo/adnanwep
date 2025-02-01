@@ -1,27 +1,28 @@
-// تفاصيل اللغات
-const languageDetails = {
-    JavaScript: "جافاسكريبت هي لغة برمجة تستخدم لتطوير تطبيقات الويب التفاعلية. تُستخدم في كل من الواجهة الأمامية والخلفية.",
-    HTML: "HTML هي لغة ترميز تستخدم لإنشاء هيكل صفحات الويب. تُعتبر العمود الفقري لأي موقع ويب.",
-    Python: "بايثون هي لغة برمجة عالية المستوى تستخدم في تطوير الويب، الذكاء الاصطناعي، وتحليل البيانات.",
-    CSS: "CSS هي لغة تنسيق تستخدم لتزيين صفحات الويب. تُستخدم للتحكم في الألوان، الخطوط، والتخطيط.",
-    "C++": "سي++ هي لغة برمجة قوية تستخدم في تطوير الألعاب، الأنظمة المدمجة، والتطبيقات عالية الأداء.",
-    "C#": "سي# هي لغة برمجة طورتها مايكروسوفت. تُستخدم في تطوير الألعاب (خاصة مع Unity) وتطبيقات الويب.",
-};
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+    const languageItems = document.querySelectorAll(".language-item");
+    const languageDetails = document.getElementById("language-details");
 
-// عرض تفاصيل اللغة
-document.querySelectorAll(".language-item").forEach((item) => {
-    item.addEventListener("click", () => {
-        const language = item.getAttribute("data-language");
-        const details = languageDetails[language];
-        const detailsContainer = document.getElementById("language-details");
+    const languageInfo = {
+        JavaScript: "جافاسكريبت هي لغة برمجة تستخدم لتطوير تطبيقات الويب التفاعلية.",
+        HTML: "HTML هي لغة ترميز تستخدم لإنشاء هيكل صفحات الويب.",
+        Python: "بايثون هي لغة برمجة قوية وسهلة التعلم تستخدم في تطوير الويب والذكاء الاصطناعي.",
+        CSS: "CSS هي لغة تنسيق تستخدم لتزيين وتصميم صفحات الويب.",
+        "C++": "سي++ هي لغة برمجة قوية تستخدم في تطوير الألعاب والأنظمة.",
+        "C#": "سي شارب هي لغة برمجة تستخدم في تطوير تطبيقات الويب والألعاب باستخدام .NET.",
+    };
 
-        // إضافة التفاصيل إلى العنصر
-        detailsContainer.innerHTML = `
-            <h3>${language}</h3>
-            <p>${details}</p>
-        `;
+    languageItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            const language = item.getAttribute("data-language");
+            languageDetails.innerHTML = `<p>${languageInfo[language]}</p>`;
+            languageDetails.classList.add("active");
+        });
+    });
 
-        // إظهار التفاصيل
-        detailsContainer.classList.add("active");
+    // Theme Toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
     });
 });
